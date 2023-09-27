@@ -15,4 +15,9 @@ Prerequisite: K8s cluster (kind, minikube) with cert-manager installed.
 
 3. Copy a sufficently authorized kubeconfig to `.kubeconfig` in the root folder of this repository.
 
+4. Create a mapping file for testing (will be excluded from git versioning):
+   ```bash
+   echo -n '[]' > .local/mapping.json
+   ```
+
 Afterwards (if using vscode) it should be possible to start the operator with the included launch configuration.

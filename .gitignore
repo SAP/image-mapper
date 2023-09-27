@@ -31,3 +31,4 @@ __debug_bin
 # local stuff
 /.kubeconfig
 /.local/ssl
+/.local/mapping.json

@@ -13,7 +13,10 @@
             "args": [
                 "--bind-address=:2443",
                 "--tls-key-file=${workspaceFolder}/.local/ssl/tls.key",
-                "--tls-cert-file=${workspaceFolder}/.local/ssl/tls.crt"
+                "--tls-cert-file=${workspaceFolder}/.local/ssl/tls.crt",
+                "--mapping-file=${workspaceFolder}/.local/mapping.json",
+                "--add-label-if-modified=image-modified=true",
+                "--add-annotation-if-modified=image-modified=true"
             ]
         }
     ]
