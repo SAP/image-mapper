@@ -1,32 +1,59 @@
-# SAP Repository Template
+# Kubernetes Image Mapper
 
-Default templates for SAP open source repositories, including LICENSE, .reuse/dep5, Code of Conduct, etc... All repositories on github.com/SAP will be created based on this template.
-
-## To-Do
-
-In case you are the maintainer of a new SAP open source project, these are the steps to do with the template files:
-
-- Check if the default license (Apache 2.0) also applies to your project. A license change should only be required in exceptional cases. If this is the case, please change the [license file](LICENSE).
-- Enter the correct metadata for the REUSE tool. See our [wiki page](https://wiki.wdf.sap.corp/wiki/display/ospodocs/Using+the+Reuse+Tool+of+FSFE+for+Copyright+and+License+Information) for details how to do it. You can find an initial .reuse/dep5 file to build on. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository and be sure to run the REUSE tool to validate that the metadata is correct.
-- Adjust the contribution guidelines (e.g. add coding style guidelines, pull request checklists, different license if needed etc.)
-- Add information about your project to this README (name, description, requirements etc). Especially take care for the <your-project> placeholders - those ones need to be replaced with your project name. See the sections below the horizontal line and [our guidelines on our wiki page](https://wiki.wdf.sap.corp/wiki/display/ospodocs/Guidelines+for+README.md+file) what is required and recommended.
-- Remove all content in this README above and including the horizontal line ;)
-
-***
-
-# Our new open source project
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/image-mapper)](https://api.reuse.software/info/github.com/SAP/image-mapper)
 
 ## About this project
 
-*Insert a short description of your project here...*
+This service can act as a [Mutating Kubernetes Admission Webhook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers) for pods, and allows to dynamically adjust the images used by the containers of a pod, according to configurable rules.
+
+All pods for which the admission webhook is called by the Kubernetes API server are subject to the replacement (if pods should be excluded, this has to be done by selectors in the webhook registration).
+For each of the pod's containers, the replacement rules are evaluated, and the first matching rule defines the replacement for the image. Rules are specified in the file provided by command line switch `-mapping-file`. The file should contain a JSON array in the following form:
+
+```
+[
+  {
+    "pattern": "(.+/my-image):.*",
+    "replacement": "$1:latest"
+  },
+  {
+    "pattern": "some-registry/.*",
+    "replacement": "other-registry/${repository}:${tag}"
+  },
+  ...
+]
+```
+
+The pattern can be an arbitrary regular expressions (go syntax) which will be automatically anchored (so adding anchors is not necessary).
+If the pattern contains any capturing groups, then the according matches can be used in the replacement as $1, $2, ..., as usual.
+If it does not, then the variables ${registry}, ${repository} and ${tag} will be populated, and can be used in the replacement.
+
+To simplify the rules, the image will be normalized before the rule processing happens, in the following sense: 
+- images which do not specify a tag, will be passed with suffix :latest to the rule matching
+- images which do not specify a registry (i.e. Docker hub) will be passed with prefix docker.io/ to the rule matching.
+
+If at least one image was replaced, then configurable labels or annotations can be added, as specified via the command line arguments `-add-label-if-modified` and  `-add-annotation-if-modified` (which can be repeated), in the usual format `key=value`.
+
+Note: in case this webhook has to reliably work with pods that are created or mutated by other webhooks, this one probably has to be registered with `reinvocationPolicy: IfNeeded`.
+
+**Command line flags**
+
+|Flag                         |Optional|Default|Description                                                 |
+|-----------------------------|--------|-------|------------------------------------------------------------|
+|-bind-address string         |yes     |:2443  |Webhook bind address                                        |
+|-tls-key-file                |no      |-      |File containing the TLS private key used for SSL termination|
+|-tls-cert-file               |no      |-      |File containing the TLS certificate matching the private key|
+|-mapping-file                |no      |-      |File containing the mapping rules                           |
+|-add-label-if-modified       |yes     |-      |Label to be set if pod was mutated (can be repeated)        |
+|-add-annotation-if-modified  |yes     |-      |Annotation to be set if pod was mutated (can be repeated)   |
 
 ## Requirements and Setup
 
-*Insert a short description what is required to get your project running...*
+The recommended deployment method is to use the [Helm chart](https://github.com/sap/image-mapper-helm):
+
 
 ## Support, Feedback, Contributing
 
-This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/<your-project>/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
+This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/image-mapper/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
 
 ## Code of Conduct
 
@@ -34,4 +61,4 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 ## Licensing
 
-Copyright (20xx-)20xx SAP SE or an SAP affiliate company and <your-project> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
+Copyright 2023 SAP SE or an SAP affiliate company and image-mapper contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/image-mapper).
