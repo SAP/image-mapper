@@ -50,6 +50,13 @@ Note: in case this webhook has to reliably work with pods that are created or mu
 
 The recommended deployment method is to use the [Helm chart](https://github.com/sap/image-mapper-helm):
 
+```bash
+helm upgrade -i image-mapper oci://ghcr.io/sap/image-mapper-helm/image-mapper
+```
+
+## Documentation
+
+The API reference is here: [https://pkg.go.dev/github.com/sap/image-mapper](https://pkg.go.dev/github.com/sap/image-mapper).
 
 ## Support, Feedback, Contributing
 
