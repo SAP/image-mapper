@@ -24,12 +24,12 @@ For each of the pod's containers, the replacement rules are evaluated, and the f
 ```
 
 The pattern can be an arbitrary regular expressions (go syntax) which will be automatically anchored (so adding anchors is not necessary).
-If the pattern contains any capturing groups, then the according matches can be used in the replacement as $1, $2, ..., as usual.
-If it does not, then the variables ${registry}, ${repository} and ${tag} will be populated, and can be used in the replacement.
+If the pattern contains any capturing groups, then the according matches can be used in the replacement as `$1`, `$2`, ..., as usual.
+If it does not, then the variables `${registry}`, `${repository}` and `${tag}` will be populated, and can be used in the replacement.
 
 To simplify the rules, the image will be normalized before the rule processing happens, in the following sense: 
-- images which do not specify a tag, will be passed with suffix :latest to the rule matching
-- images which do not specify a registry (i.e. Docker hub) will be passed with prefix docker.io/ to the rule matching.
+- images which do not specify a tag, will be implicitly matched with suffix :latest
+- images which do not specify a registry (i.e. Docker hub) will be implicitly matched with prefix docker.io/.
 
 If at least one image was replaced, then configurable labels or annotations can be added, as specified via the command line arguments `-add-label-if-modified` and  `-add-annotation-if-modified` (which can be repeated), in the usual format `key=value`.
 
