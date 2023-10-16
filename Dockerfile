@@ -1,24 +1,24 @@
 ### build go executable
 FROM --platform=$BUILDPLATFORM golang:1.21.3 as build
+ARG TARGETOS TARGETARCH
 
-WORKDIR /go/src
+WORKDIR /workspace
 
-COPY go.mod go.sum /go/src/
+COPY go.mod go.mod
+COPY go.sum go.sum
 RUN go mod download
 
-COPY cmd /go/src/cmd
-COPY internal /go/src/internal
+COPY cmd/ cmd/
+COPY internal/ internal/
+COPY Makefile Makefile
 
-RUN go test ./...
-
-WORKDIR /go/src/cmd/webhook
-
-ARG TARGETOS TARGETARCH
-RUN CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -a -o /go/bin/webhook .
+RUN make envtest \
+ && CGO_ENABLED=0 KUBEBUILDER_ASSETS="/workspace/bin/k8s/current" go test ./... \
+ && CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build -a -o ./bin/webhook ./cmd/webhook
 
 ### final image
 FROM scratch
 
 ENTRYPOINT ["/app/bin/webhook"]
 
-COPY --from=build /go/bin/webhook /app/bin/webhook
+COPY --from=build /workspace/bin/webhook /app/bin/webhook
