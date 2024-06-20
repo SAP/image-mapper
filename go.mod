@@ -10,7 +10,7 @@ require (
 	github.com/sap/admission-webhook-runtime v0.1.33
 	k8s.io/api v0.30.2
 	k8s.io/apimachinery v0.30.2
-	k8s.io/klog/v2 v2.130.0
+	k8s.io/klog/v2 v2.130.1
 )
 
 require (
