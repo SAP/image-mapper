@@ -206,6 +206,8 @@ github.com/sap/admission-webhook-runtime v0.1.35 h1:S9JcXZvHRS1tvrbYgKrw7CzHZlh6
 github.com/sap/admission-webhook-runtime v0.1.35/go.mod h1:zMsS6+sABJP6jQbZ4wwX39Fl/gHb+9uBxbXWQV9lmz4=
 github.com/sap/admission-webhook-runtime v0.1.36 h1:YrRjGp9gagIhsGhJrC2VhKhfIbNdCl2JxuI+yrxP6Xs=
 github.com/sap/admission-webhook-runtime v0.1.36/go.mod h1:hJuxVIZZCcnx5FqJgPTxLNmB1RhEUlYEy20YGQ2xCvg=
+github.com/sap/admission-webhook-runtime v0.1.37 h1:qiqflc4nw1NI6r7IUiO5mvqdz9kDdr555Iknu8Fxuxo=
+github.com/sap/admission-webhook-runtime v0.1.37/go.mod h1:4NfnTGNJBamje8MVPucX+xQ6C9UIAetiZdaajb7+mF0=
 github.com/spf13/pflag v1.0.5 h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
