@@ -4,10 +4,10 @@ go 1.23.4
 
 require (
 	github.com/go-logr/logr v1.4.2
-	github.com/onsi/ginkgo/v2 v2.22.1
+	github.com/onsi/ginkgo/v2 v2.22.2
 	github.com/onsi/gomega v1.36.2
 	github.com/pkg/errors v0.9.1
-	github.com/sap/admission-webhook-runtime v0.1.53
+	github.com/sap/admission-webhook-runtime v0.1.54
 	k8s.io/api v0.32.0
 	k8s.io/apimachinery v0.32.0
 	k8s.io/klog/v2 v2.130.1
