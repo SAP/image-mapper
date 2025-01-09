@@ -11,7 +11,7 @@ require (
 	k8s.io/api v0.32.0
 	k8s.io/apimachinery v0.32.0
 	k8s.io/klog/v2 v2.130.1
-	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20250109042031-2484715d3919
+	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20250109154033-1de5a3e8bae9
 )
 
 require (
