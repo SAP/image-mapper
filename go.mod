@@ -1,17 +1,17 @@
 module github.com/sap/image-mapper
 
-go 1.24.0
+go 1.24.1
 
 require (
 	github.com/go-logr/logr v1.4.2
 	github.com/onsi/ginkgo/v2 v2.22.2
 	github.com/onsi/gomega v1.36.2
 	github.com/pkg/errors v0.9.1
-	github.com/sap/admission-webhook-runtime v0.1.55
-	k8s.io/api v0.32.1
-	k8s.io/apimachinery v0.32.1
+	github.com/sap/admission-webhook-runtime v0.1.59
+	k8s.io/api v0.32.2
+	k8s.io/apimachinery v0.32.2
 	k8s.io/klog/v2 v2.130.1
-	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20250119205035-aafb269430af
+	sigs.k8s.io/controller-runtime/tools/setup-envtest 6eb011f4f89e
 )
 
 require (
