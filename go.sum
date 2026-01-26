@@ -91,6 +91,8 @@ github.com/rogpeppe/go-internal v1.14.1 h1:UQB4HGPB6osV0SQTLymcB4TgvyWu6ZyliaW0t
 github.com/rogpeppe/go-internal v1.14.1/go.mod h1:MaRKkUm5W0goXpeCfT7UZI6fk/L7L7so1lCWt35ZSgc=
 github.com/sap/admission-webhook-runtime v0.1.82 h1:5R5BmAhGf7KMwvE/RSWx0r3LiIJCTP3b80qXWfh4cHU=
 github.com/sap/admission-webhook-runtime v0.1.82/go.mod h1:0qk5ZfYk/bmfHhS49Dwz9H/rk46eARKllns5WHTRIqM=
+github.com/sap/admission-webhook-runtime v0.1.83 h1:lZItvlPV18yOdtbjX09yN9TC7uEp/hbyrKB8BjPl7sg=
+github.com/sap/admission-webhook-runtime v0.1.83/go.mod h1:J3fzrIzgTGyfVi8lZUCVKtaPAXbolDxPT6ydR11Ee3k=
 github.com/spf13/afero v1.12.0 h1:UcOPyRBYczmFn6yvphxkn9ZEOY65cpwGKb5mL36mrqs=
 github.com/spf13/afero v1.12.0/go.mod h1:ZTlWwG4/ahT8W7T0WQ5uYmjI9duaLQGy3Q2OAl4sk/4=
 github.com/spf13/pflag v1.0.9 h1:9exaQaMOCwffKiiiYk6/BndUBv+iRViNW+4lEMi0PvY=
@@ -168,6 +170,7 @@ sigs.k8s.io/controller-runtime v0.22.4 h1:GEjV7KV3TY8e+tJ2LCTxUTanW4z/FmNB7l327U
 sigs.k8s.io/controller-runtime v0.22.4/go.mod h1:+QX1XUpTXN4mLoblf4tqr5CQcyHPAki2HLXqQMY6vh8=
 sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20260120065648-aebc15d7c689 h1:4k1Nh4Dxb9FPOnrPiBEpehpfkPNOUuJeRDzCqwtekpM=
 sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20260120065648-aebc15d7c689/go.mod h1:/BwOHkjE31BJ0eqwWNH+XizfhDZv+GqzOGcJFN9iWvw=
+sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20260125161707-82cc073adb06/go.mod h1:/BwOHkjE31BJ0eqwWNH+XizfhDZv+GqzOGcJFN9iWvw=
 sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730 h1:IpInykpT6ceI+QxKBbEflcR5EXP7sU1kvOlxwZh5txg=
 sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730/go.mod h1:mdzfpAEoE6DHQEN0uh9ZbOCuHbLK5wOm7dK4ctXE9Tg=
 sigs.k8s.io/randfill v1.0.0 h1:JfjMILfT8A6RbawdsK2JXGBR5AQVfd+9TbzrlneTyrU=
