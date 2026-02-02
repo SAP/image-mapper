@@ -7,11 +7,11 @@ require (
 	github.com/onsi/ginkgo/v2 v2.28.1
 	github.com/onsi/gomega v1.39.1
 	github.com/pkg/errors v0.9.1
-	github.com/sap/admission-webhook-runtime v0.1.83
+	github.com/sap/admission-webhook-runtime v0.1.84
 	k8s.io/api v0.35.0
 	k8s.io/apimachinery v0.35.0
 	k8s.io/klog/v2 v2.130.1
-	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20260131020224-aba4afecb038
+	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20260202103230-8ebd0ffa23d3
 )
 
 require (
@@ -43,6 +43,6 @@ require (
 	k8s.io/utils v0.0.0-20251002143259-bc988d571ff4 // indirect
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730 // indirect
 	sigs.k8s.io/randfill v1.0.0 // indirect
-	sigs.k8s.io/structured-merge-diff/v6 v6.3.0 // indirect
+	sigs.k8s.io/structured-merge-diff/v6 v6.3.2-0.20260122202528-d9cc6641c482 // indirect
 	sigs.k8s.io/yaml v1.6.0 // indirect
 )
