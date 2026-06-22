@@ -13,6 +13,11 @@
   "postUpdateOptions": [
     "gomodUpdateImportPaths"
   ],
+  "postUpgradeTasks": {
+    "commands": ["go mod tidy"],
+    "fileFilters": ["go.sum"],
+    "executionMode": "branch"
+  },
   "ignoreDeps": [
     "docker.io/bitnami/redis",
     "docker.io/bitnami/redis-sentinel",
