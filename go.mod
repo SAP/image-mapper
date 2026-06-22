@@ -1,17 +1,17 @@
 module github.com/sap/image-mapper
 
-go 1.26.2
+go 1.26.4
 
 require (
 	github.com/go-logr/logr v1.4.3
 	github.com/onsi/ginkgo/v2 v2.31.0
 	github.com/onsi/gomega v1.42.0
 	github.com/pkg/errors v0.9.1
-	github.com/sap/admission-webhook-runtime v0.1.93
-	k8s.io/api v0.36.0
-	k8s.io/apimachinery v0.36.0
+	github.com/sap/admission-webhook-runtime v0.1.99
+	k8s.io/api v0.36.2
+	k8s.io/apimachinery v0.36.2
 	k8s.io/klog/v2 v2.140.0
-	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.24.0
+	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.24.1
 )
 
 require (
@@ -28,7 +28,7 @@ require (
 	github.com/spf13/pflag v1.0.9 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
-	go.uber.org/zap v1.27.0 // indirect
+	go.uber.org/zap v1.27.1 // indirect
 	go.yaml.in/yaml/v2 v2.4.3 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
 	golang.org/x/mod v0.35.0 // indirect
