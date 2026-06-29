@@ -90,6 +90,8 @@ github.com/rogpeppe/go-internal v1.14.1 h1:UQB4HGPB6osV0SQTLymcB4TgvyWu6ZyliaW0t
 github.com/rogpeppe/go-internal v1.14.1/go.mod h1:MaRKkUm5W0goXpeCfT7UZI6fk/L7L7so1lCWt35ZSgc=
 github.com/sap/admission-webhook-runtime v0.1.99 h1:6D0U2jI7QV78n3suFSiGlJK0bMptVFxq17L1Y3u0tH0=
 github.com/sap/admission-webhook-runtime v0.1.99/go.mod h1:aw3txMUtVfjKv4kRgc412fDW1APlPeKrABMKecHNSY0=
+github.com/sap/admission-webhook-runtime v0.1.100 h1:YqgBzJTaXxYeNBGH9eNflYqIGNncfHTUhIhSLHU6NGg=
+github.com/sap/admission-webhook-runtime v0.1.100/go.mod h1:G29TjXeUKaVxrdUbxsrR5ZS4QKWsLODNKOAxw5nG1+E=
 github.com/spf13/afero v1.12.0 h1:UcOPyRBYczmFn6yvphxkn9ZEOY65cpwGKb5mL36mrqs=
 github.com/spf13/afero v1.12.0/go.mod h1:ZTlWwG4/ahT8W7T0WQ5uYmjI9duaLQGy3Q2OAl4sk/4=
 github.com/spf13/pflag v1.0.9 h1:9exaQaMOCwffKiiiYk6/BndUBv+iRViNW+4lEMi0PvY=
