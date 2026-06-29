@@ -11,8 +11,7 @@
   "prConcurrentLimit": 10,
   "semanticCommits": "enabled",
   "postUpdateOptions": [
-    "gomodUpdateImportPaths",
-    "gomodTidy"
+    "gomodUpdateImportPaths"
   ],
   "ignoreDeps": [
     "docker.io/bitnami/redis",
