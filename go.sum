@@ -98,6 +98,8 @@ github.com/sap/admission-webhook-runtime v0.1.101 h1:uo2sN8fqS19xdhN6990c8YaRe0s
 github.com/sap/admission-webhook-runtime v0.1.101/go.mod h1:J44TaFjb1fz/dNR9Fc450bbkSNo5YZ0SkZhDACWiyw0=
 github.com/sap/admission-webhook-runtime v0.1.102 h1:otbb9KQXmf0jLDX42cEKWdhuqXR7ydPiEizlgwbpsLk=
 github.com/sap/admission-webhook-runtime v0.1.102/go.mod h1:J44TaFjb1fz/dNR9Fc450bbkSNo5YZ0SkZhDACWiyw0=
+github.com/sap/admission-webhook-runtime v0.1.103 h1:lO95tLOsgHmZ1y1wydUcb8IkGf9cBKRLg6g0QFUCGu8=
+github.com/sap/admission-webhook-runtime v0.1.103/go.mod h1:gnpIDb8Z9dLAdo0oo34Jc/PZdAc7d7k8dyP04a2/kTM=
 github.com/spf13/afero v1.12.0 h1:UcOPyRBYczmFn6yvphxkn9ZEOY65cpwGKb5mL36mrqs=
 github.com/spf13/afero v1.12.0/go.mod h1:ZTlWwG4/ahT8W7T0WQ5uYmjI9duaLQGy3Q2OAl4sk/4=
 github.com/spf13/pflag v1.0.9 h1:9exaQaMOCwffKiiiYk6/BndUBv+iRViNW+4lEMi0PvY=
